@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEWS API</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- nav start -->
+  <nav>
+    <!-- nav container -->
+    <div class="main-nav container flex">
+      <!-- logo -->
+      <a href="#" onclick="reload()" class="Company-logo">
+        <img src=".//logo.png" alt="Company Logo">
+      </a>
+      <!-- logo end -->
+       <!-- ul -->
+      <div class="nav-links">
+        <ul class="flex">
+          <li class="hover-link nav-item" id="IPL" onclick="onNavItemClick('IPL')">IPL</li>
+           <li class="hover-link nav-item" id="Finance" onclick="onNavItemClick('Finance')">Finance</li>
+            <li class="hover-link nav-item" id="Politics" onclick="onNavItemClick('Politics')">Politics</li>
+        </ul>
+      </div>
+      <!-- ul end -->
+
+       <!--search input  & button-->
+      <div class="search-bar flex">
+        <input type="text" class="news-input" id="news-input" placeholder="e.g. Science">
+        <button class="search-button" id="search-button">Search</button>
+      </div>
+      <!-- search input  & button end -->
+    </div>
+    <!-- nav container end -->
+  </nav>
+ <!-- nav end -->
+
+<!-- Loader -->
+<div id="loader" class="loader-container">
+  <div class="spinner"></div>
+</div>
+<!-- Loader End -->
+
+
+<!-- main -->
+  <main>
+    <!-- cards container -->
+   <div class="cards-container container flex" id="cards-container"></div>
+   <!--  cards container end -->
+  </main>
+  <!-- main end -->
+
+  <!-- template -->
+  <template id="template-news-card">
+<div class="card">
+    <div class="card-header">
+      <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+    </div>
+    <div class="card-content">
+      <h3 id="news-title">This is the Title</h3>
+      <h6 class="news-source" id="news-source">End Gadget 22/12/2025</h6>
+      <p class="news-desc" id="news-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis suscipit quod aliquam dolores rem harum veniam fugiat ad voluptate dolor omnis tempore ea et veritatis, labore unde placeat. Incidunt, repellendus.</p>
+    </div>
+   </div>
+  </template>
+  <!-- template end -->
+    <script src="app.js"></script>
+</body>
+</html>
